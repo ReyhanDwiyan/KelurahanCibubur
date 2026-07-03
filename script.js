@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const updateCounter = () => {
                 current += increment;
                 if (current < target) {
-                    // Format number with dots for thousands
                     stat.innerText = Math.ceil(current).toLocaleString('id-ID');
                     requestAnimationFrame(updateCounter);
                 } else {
@@ -101,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Use Intersection Observer to trigger animation when stats are in view
     const statsSection = document.querySelector('.stats-grid');
     if (statsSection) {
         const observer = new IntersectionObserver((entries) => {
@@ -112,5 +110,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.5 });
         
         observer.observe(statsSection);
+    }
+
+    // 5. Profile Tabs
+    const profileNav = document.getElementById('profileNav');
+    if (profileNav) {
+        const navItems = profileNav.querySelectorAll('li');
+        const panes = document.querySelectorAll('.profile-pane');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active from all
+                navItems.forEach(n => n.classList.remove('active'));
+                panes.forEach(p => p.classList.remove('active'));
+
+                // Add active to clicked
+                item.classList.add('active');
+                const targetId = item.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
     }
 });

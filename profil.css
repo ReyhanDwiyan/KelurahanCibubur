@@ -1,0 +1,492 @@
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0A3254 100%);
+    padding: 130px 0 60px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+/* Profile Layout */
+.profile-section {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+    min-height: 70vh;
+}
+
+.profile-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.profile-sidebar {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 100px;
+}
+
+.profile-nav {
+    background: var(--text-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.profile-nav li {
+    padding: 18px 24px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-nav li:last-child {
+    border-bottom: none;
+}
+
+.profile-nav li:hover {
+    background: rgba(15, 76, 129, 0.05);
+    color: var(--primary-color);
+    padding-left: 30px;
+}
+
+.profile-nav li.active {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* Content Area */
+.profile-content {
+    flex: 1;
+    background: var(--text-light);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.profile-pane {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.profile-pane.active {
+    display: block;
+}
+
+.profile-pane h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Lurah Profile */
+.lurah-card {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.lurah-card img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 5px solid var(--bg-light);
+}
+
+.lurah-info h4 {
+    font-size: 2rem;
+    color: var(--text-dark);
+}
+
+.lurah-info .jabatan {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.lurah-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.lurah-details li {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.lurah-details strong {
+    color: var(--primary-color);
+    display: inline-block;
+    width: 130px;
+}
+
+.lurah-bio {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Struktur Dummy */
+.struktur-dummy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.org-box {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 250px;
+    box-shadow: 0 4px 15px rgba(15, 76, 129, 0.2);
+    position: relative;
+}
+
+.org-box.lurah {
+    background: var(--secondary-color);
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    padding: 20px 40px;
+}
+
+.org-lines {
+    position: relative;
+    padding-top: 30px;
+}
+
+.org-lines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background: var(--primary-color);
+}
+
+.org-box.sekkel {
+    background: #0A3254;
+}
+
+.org-branches {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.org-branches::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 125px; /* Adjust based on box width */
+    right: 125px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.org-branches .org-box::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background: var(--primary-color);
+}
+
+/* Tupoksi */
+.tupoksi-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tupoksi-card {
+    background: var(--bg-light);
+    padding: 35px;
+    border-radius: 12px;
+    border-left: 5px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.tupoksi-card:hover {
+    box-shadow: var(--box-shadow);
+    transform: translateX(5px);
+}
+
+.tupoksi-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tupoksi-card p {
+    color: var(--text-dark);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.tugas-list {
+    list-style-type: none;
+    color: var(--text-dark);
+}
+
+.tugas-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1.05rem;
+}
+
+.tugas-list li::before {
+    content: '•';
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.sub-list {
+    list-style-type: none;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.sub-list li {
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.sub-list li::before {
+    content: '-';
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 5px;
+    top: 0;
+}
+
+/* Geografi */
+.geografi-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.geografi-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--bg-light);
+}
+
+.geografi-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.geo-item {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.geo-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    background: var(--text-light);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.geo-item h5 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.geo-batas ul {
+    margin-top: 15px;
+}
+
+.geo-batas li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: space-between;
+}
+
+.geo-batas li:last-child {
+    border-bottom: none;
+}
+
+.geo-batas li strong {
+    color: var(--primary-color);
+}
+
+/* Prestasi */
+.prestasi-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.prestasi-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 12px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.prestasi-card:hover {
+    border-color: var(--secondary-color);
+    transform: translateX(10px);
+    box-shadow: var(--box-shadow);
+    background: var(--text-light);
+}
+
+.prestasi-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(15, 76, 129, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.prestasi-card:hover .prestasi-icon {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.prestasi-info h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.prestasi-info p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .profile-container {
+        flex-direction: column;
+    }
+    
+    .profile-sidebar {
+        flex: none;
+        width: 100%;
+        position: static;
+    }
+    
+    .profile-nav {
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    .profile-nav li {
+        white-space: nowrap;
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+    }
+    
+    .profile-nav li.active {
+        border-left: none;
+        border-bottom: 4px solid var(--secondary-color);
+    }
+    
+    .org-branches {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .org-branches::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .lurah-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .lurah-details {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .geografi-data {
+        grid-template-columns: 1fr;
+    }
+}
