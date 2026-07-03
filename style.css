@@ -214,6 +214,72 @@ a {
     cursor: pointer;
 }
 
+/* --- User Profile Nav --- */
+.user-profile-nav {
+    position: relative;
+}
+
+.btn-login-nav {
+    background-color: var(--primary-color);
+    color: var(--text-light) !important;
+    padding: 8px 20px !important;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-login-nav:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-dark) !important;
+}
+
+.btn-login-nav::after {
+    display: none !important; /* Hide underline for this specific button */
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    background: var(--text-light);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+}
+
+.user-profile-nav:hover .profile-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 12px 20px !important;
+    color: var(--text-dark) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-dropdown a:last-child {
+    border-bottom: none;
+    color: #e74c3c !important;
+}
+
+.profile-dropdown a:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-color) !important;
+}
+
+.profile-dropdown a::after {
+    display: none !important;
+}
+
 /* --- Hero Section --- */
 .hero {
     position: relative;

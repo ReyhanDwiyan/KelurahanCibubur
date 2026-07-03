@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Check Login State Simulation
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('status') === 'loggedin') {
+        const loginBtn = document.querySelector('.nav-login-item');
+        if (loginBtn) {
+            loginBtn.innerHTML = `
+                <div class="user-profile-nav">
+                    <a href="#" class="btn-login-nav">
+                        <i class="fas fa-user-circle"></i> Akun Saya
+                    </a>
+                    <div class="profile-dropdown">
+                        <a href="#"><i class="fas fa-cog"></i> Pengaturan</a>
+                        <a href="index.html"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+                    </div>
+                </div>
+            `;
+        }
+    }
+
     // 1. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu');
