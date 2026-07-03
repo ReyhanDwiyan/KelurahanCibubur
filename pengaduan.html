@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Pengaduan - Kelurahan Cibubur</title>
+    <meta name="description" content="Layanan Pengaduan Masyarakat Kelurahan Cibubur dan Provinsi DKI Jakarta">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/webp" href="image/Pemprov DKI Jakarta.webp">
+    <style>
+        .pengaduan-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0A3254 100%);
+            padding: 130px 0 60px;
+            color: white;
+            text-align: center;
+        }
+        .pengaduan-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .pengaduan-hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--secondary-color);
+        }
+        .pengaduan-channels {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        .section-title p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .channel-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--secondary-color);
+        }
+        .channel-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(30, 61, 89, 0.05);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 15px;
+            transition: var(--transition);
+        }
+        .channel-card:hover .channel-icon {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .channel-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        .crm-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        .crm-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .crm-content {
+            flex: 1;
+        }
+        .crm-content h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .crm-content h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .crm-content p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        .crm-image {
+            flex: 1;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(30,61,89,0.05), rgba(255,193,7,0.05));
+            border-radius: 20px;
+            padding: 40px;
+        }
+        .crm-image i {
+            font-size: 15rem;
+            color: var(--secondary-color);
+            opacity: 0.8;
+        }
+        @media (max-width: 992px) {
+            .crm-container {
+                flex-direction: column;
+            }
+            .crm-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="image/Pemprov DKI Jakarta.webp" alt="Logo Pemprov DKI Jakarta" class="logo">
+                <div class="logo-text">
+                    <h1>Kelurahan Cibubur</h1>
+                    <p>Pelayanan Publik</p>
+                </div>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="ppid.html">PPID</a></li>
+                    <li><a href="index.html#layanan">Layanan</a></li>
+                    <li><a href="pengaduan.html" class="active">Pengaduan</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                    <li class="nav-login-item"><a href="login.html" class="btn-login-nav"><i class="fas fa-sign-in-alt"></i> Masuk / Daftar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pengaduan-hero">
+        <div class="container">
+            <h1>Kanal Pengaduan Resmi Provinsi DKI Jakarta</h1>
+            <p>Saat ini, Pemerintah Provinsi DKI Jakarta memiliki 14 kanal pengaduan resmi yang terbagi dalam tiga kategori: kanal berbasis geo-tagging, kanal berbasis media sosial, dan kanal tatap muka.</p>
+        </div>
+    </section>
+
+    <!-- Channels Section -->
+    <section class="pengaduan-channels">
+        <div class="container">
+            <div class="section-title">
+                <h2>14 Kanal Pengaduan Warga</h2>
+                <p>Pilih kanal yang paling sesuai dengan kebutuhan Anda untuk melaporkan masalah atau memberikan aspirasi</p>
+            </div>
+            
+            <div class="channels-grid">
+                <a href="https://jaki.jakarta.go.id/id/" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none;">
+                    <div class="channel-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="channel-title">JAKI (Jakarta Kini)</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Aplikasi berbasis geo-tagging</p>
+                </a>
+                <a href="https://x.com/DKIJakarta" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none;">
+                    <div class="channel-icon"><i class="fab fa-twitter"></i></div>
+                    <div class="channel-title">Twitter @DKIJakarta</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Media sosial resmi</p>
+                </a>
+                <a href="https://www.facebook.com/DKIJakarta/" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none;">
+                    <div class="channel-icon"><i class="fab fa-facebook-f"></i></div>
+                    <div class="channel-title">Facebook Pemprov DKI</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Media sosial resmi</p>
+                </a>
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="channel-title">dki@jakarta.go.id</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Surat elektronik (Email)</p>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fas fa-users"></i></div>
+                    <div class="channel-title">Media Sosial Gubernur</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Interaksi langsung</p>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fas fa-sms"></i></div>
+                    <div class="channel-title">SMS 08111272206</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Pesan singkat terpadu</p>
+                </div>
+                <a href="https://jakarta.go.id/" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none;">
+                    <div class="channel-icon"><i class="fas fa-globe"></i></div>
+                    <div class="channel-title">Web jakarta.go.id</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Portal resmi Jakarta</p>
+                </a>
+                <a href="https://www.qlue.co.id/" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none;">
+                    <div class="channel-icon"><i class="fas fa-comment-dots"></i></div>
+                    <div class="channel-title">Qlue</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Laporan warga pintar</p>
+                </a>
+                <a href="https://timur.jakarta.go.id/kelurahan/cibubur" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none;">
+                    <div class="channel-icon"><i class="fas fa-building"></i></div>
+                    <div class="channel-title">Kantor Kelurahan</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Tatap muka kelurahan</p>
+                </a>
+                <a href="https://timur.jakarta.go.id/kecamatan/Ciracas" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none;">
+                    <div class="channel-icon"><i class="fas fa-city"></i></div>
+                    <div class="channel-title">Kantor Kecamatan</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Tatap muka kecamatan</p>
+                </a>
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="channel-title">Kantor Wali Kota</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Tatap muka tingkat kota</p>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fas fa-monument"></i></div>
+                    <div class="channel-title">Pendopo Balai Kota</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Pusat pemerintahan</p>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="channel-title">Kantor Inspektorat</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Tatap muka pengawasan</p>
+                </div>
+                <div class="channel-card">
+                    <div class="channel-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="channel-title">LAPOR 1708</div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Layanan aspirasi nasional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRM Section -->
+    <section class="crm-section">
+        <div class="container">
+            <div class="crm-container">
+                <div class="crm-content">
+                    <h2>Cepat Respon Masyarakat (CRM)</h2>
+                    <p>Mendukung partisipasi masyarakat dan optimalisasi kinerja pemerintah, Pemprov DKI Jakarta menyediakan kanal-kanal pengaduan resmi yang terintegrasi dengan <strong>citizen relations management</strong> dan dikenal dengan Cepat Respon Masyarakat (CRM).</p>
+                    <p>Sebagai jembatan pengaduan antara masyarakat dan pemerintah, CRM dapat menjadi muara penyelesaian segala masalah non-darurat di Jakarta.</p>
+                    
+                    <h3>Bagaimana CRM Bekerja?</h3>
+                    <p>Selayaknya sebuah sistem, Cepat Respon Masyarakat memiliki alur kerja tersendiri. Data mengenai permasalahan non-darurat yang ditemukan masyarakat masuk melalui kanal pengaduan resmi yang saat ini berjumlah 14 kanal.</p>
+                    <p>Selanjutnya, dengan bantuan teknologi informasi dan komunikasi, laporan tersebut diintegrasikan melalui citizen relations management kemudian disampaikan ke kelurahan atau dinas terkait. Proses sederhana seperti ini membuat waktu koordinasi dan penyelesaian masalah menjadi lebih efisien dengan hasil yang efektif.</p>
+                    <p>Proses tindak lanjut laporan yang disampaikan pun <strong>dapat dipantau langsung oleh masyarakat</strong>. Hal ini sebagai bukti transparansi pekerjaan Organisasi Perangkat Daerah (OPD) dalam menyelesaikan laporan. Masyarakat dapat mengikuti perkembangan laporannya melalui sistem pelacakan pada situs web Pengaduan Warga. Ketika laporan sudah selesai ditangani oleh OPD, bukti berupa foto akan diunggah oleh petugas dan dapat diakses oleh masyarakat luas.</p>
+                </div>
+                <div class="crm-image">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3 style="margin-top: 30px; color: var(--primary-color);">Integrasi & Transparansi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="kontak">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="image/Pemprov DKI Jakarta.webp" alt="Logo DKI Jakarta">
+                        <h3>Kelurahan Cibubur</h3>
+                    </div>
+                    <p>Pemerintah Provinsi DKI Jakarta. Kami berkomitmen untuk memberikan pelayanan publik yang cepat, transparan, dan profesional.</p>
+                </div>
+
+                </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kelurahan Cibubur - Pemerintah Provinsi DKI Jakarta</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
