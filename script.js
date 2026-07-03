@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // 0. Check Login State Simulation
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('status') === 'loggedin') {
+        localStorage.setItem('is_loggedin', 'true');
+        // Clear param from URL optionally, but setting localstorage is enough
+    }
+
+    if (localStorage.getItem('is_loggedin') === 'true') {
         const loginBtn = document.querySelector('.nav-login-item');
         if (loginBtn) {
             loginBtn.innerHTML = `
@@ -11,10 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     </a>
                     <div class="profile-dropdown">
                         <a href="#"><i class="fas fa-cog"></i> Pengaturan</a>
-                        <a href="index.html"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+                        <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Keluar</a>
                     </div>
                 </div>
             `;
+            
+            const logoutBtn = document.getElementById('logout-btn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem('is_loggedin');
+                    window.location.href = 'index.html';
+                });
+            }
         }
     }
 

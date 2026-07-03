@@ -13,6 +13,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="berita.css">
+    <link rel="icon" type="image/webp" href="image/Pemprov DKI Jakarta.webp">
 </head>
 
 <body>
@@ -36,6 +38,7 @@
                 <ul>
                     <li><a href="#beranda" class="active">Beranda</a></li>
                     <li><a href="profil.html">Profil</a></li>
+                    <li><a href="ppid.html">PPID</a></li>
                     <li><a href="#layanan">Layanan</a></li>
                     <li><a href="#pengaduan">Pengaduan</a></li>
                     <li><a href="#berita">Berita</a></li>
@@ -68,35 +71,45 @@
                 <p>Pilih jenis layanan yang Anda butuhkan</p>
             </div>
             <div class="services-grid">
-                <a href="#" class="service-card">
+                <a href="https://jakevo.jakarta.go.id" target="_blank" rel="noopener noreferrer" class="service-card">
+                    <div class="service-icon"><i class="fas fa-heart"></i></div>
+                    <h3>PM1 Nikah</h3>
+                    <p>Layanan PM1 Nikah via JAKEVO</p>
+                </a>
+                <a href="https://jakevo.jakarta.go.id" target="_blank" rel="noopener noreferrer" class="service-card">
+                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>PM1 Umum</h3>
+                    <p>Layanan PM1 Umum via JAKEVO</p>
+                </a>
+                <a href="https://jakevo.jakarta.go.id" target="_blank" rel="noopener noreferrer" class="service-card">
+                    <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>PM1 Pecah/Balik Nama PBB</h3>
+                    <p>Layanan Objek Baru PBB via JAKEVO</p>
+                </a>
+                <a href="https://jakevo.jakarta.go.id" target="_blank" rel="noopener noreferrer" class="service-card">
                     <div class="service-icon"><i class="fas fa-id-card"></i></div>
-                    <h3>Surat Keterangan</h3>
-                    <p>Pengurusan berbagai jenis surat pengantar dan keterangan</p>
+                    <h3>PM1 Nama/Orang Sama</h3>
+                    <p>Layanan identitas via JAKEVO</p>
                 </a>
-                <a href="#" class="service-card">
-                    <div class="service-icon"><i class="fas fa-users"></i></div>
-                    <h3>Administrasi Kependudukan</h3>
-                    <p>Pelayanan KTP, KK, Akta Kelahiran, dan dokumen lainnya</p>
+                <a href="https://jakevo.jakarta.go.id" target="_blank" rel="noopener noreferrer" class="service-card">
+                    <div class="service-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>PM1 Alamat Sama</h3>
+                    <p>Layanan kesamaan alamat via JAKEVO</p>
                 </a>
-                <a href="#" class="service-card">
-                    <div class="service-icon"><i class="fas fa-home"></i></div>
-                    <h3>Surat Pengantar RT/RW</h3>
-                    <p>Layanan pembuatan surat pengantar dari tingkat RT/RW</p>
+                <a href="https://jakevo.jakarta.go.id" target="_blank" rel="noopener noreferrer" class="service-card">
+                    <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>SKTM PTSP</h3>
+                    <p>Surat Keterangan Tidak Mampu via JAKEVO</p>
                 </a>
-                <a href="#" class="service-card">
-                    <div class="service-icon"><i class="fas fa-file-signature"></i></div>
-                    <h3>Legalisasi Dokumen</h3>
-                    <p>Pelayanan legalisasi dokumen kependudukan</p>
+                <a href="https://oss.go.id" target="_blank" rel="noopener noreferrer" class="service-card">
+                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Nomor Ijin Berusaha (NIB)</h3>
+                    <p>Layanan perizinan berusaha via OSS</p>
                 </a>
-                <a href="#" class="service-card">
-                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3>Pengaduan Masyarakat</h3>
-                    <p>Sampaikan keluhan dan saran untuk lingkungan kita</p>
-                </a>
-                <a href="#" class="service-card">
-                    <div class="service-icon"><i class="fas fa-calendar-check"></i></div>
-                    <h3>Booking Pelayanan</h3>
-                    <p>Jadwalkan kunjungan Anda ke kantor kelurahan</p>
+                <a href="https://oss.go.id" target="_blank" rel="noopener noreferrer" class="service-card">
+                    <div class="service-icon"><i class="fas fa-stamp"></i></div>
+                    <h3>Perijinan Umum</h3>
+                    <p>Layanan perizinan umum via OSS</p>
                 </a>
             </div>
         </div>
@@ -109,38 +122,15 @@
 
                 <!-- Informasi Terbaru -->
                 <div class="info-section">
-                    <div class="section-header align-left">
-                        <h2>Informasi Terbaru</h2>
+                    <div class="section-header align-left" style="display:flex; justify-content:space-between; align-items:flex-end;">
+                        <div>
+                            <h2 style="margin-bottom:0;">Informasi Terbaru</h2>
+                        </div>
+                        <a href="berita.html" class="btn btn-secondary" style="color:var(--primary-color); border-color:var(--border-color); padding:8px 20px;">Lihat Semua</a>
                     </div>
-                    <div class="info-list">
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fas fa-bell"></i></div>
-                            <div class="info-content">
-                                <h4>Pengumuman</h4>
-                                <p>Informasi penting terkait layanan masyarakat</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fas fa-clock"></i></div>
-                            <div class="info-content">
-                                <h4>Jadwal Pelayanan</h4>
-                                <p>Jam operasional kantor kelurahan</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fas fa-newspaper"></i></div>
-                            <div class="info-content">
-                                <h4>Berita Kelurahan</h4>
-                                <p>Berita terkini seputar kegiatan kelurahan</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
-                            <div class="info-content">
-                                <h4>Agenda Kegiatan</h4>
-                                <p>Jadwal acara dan kegiatan masyarakat</p>
-                            </div>
-                        </div>
+                    <!-- Dynamic News from localStorage -->
+                    <div class="home-news-wrapper" id="home-news-container">
+                        <!-- Loaded via JS -->
                     </div>
                 </div>
 
@@ -225,6 +215,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="berita.js"></script>
 </body>
 
 </html>
