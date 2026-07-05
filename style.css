@@ -54,6 +54,16 @@ a {
     text-align: left;
 }
 
+.section-header .subtitle {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
 .section-header h2 {
     font-size: 2.5rem;
     color: var(--primary-color);
@@ -532,6 +542,101 @@ a {
     font-size: 1rem;
     font-weight: 500;
     opacity: 0.9;
+}
+
+
+/* Media Sosial Section */
+.sosmed-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.sosmed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.sosmed-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.sosmed-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.sosmed-card.instagram::before { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.sosmed-card.tiktok::before { background: #000000; }
+.sosmed-card.x-twitter::before { background: #1DA1F2; }
+.sosmed-card.threads::before { background: #000000; }
+
+.sosmed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.sosmed-card:hover.instagram { border-color: #dc2743; }
+.sosmed-card:hover.tiktok { border-color: #000000; }
+.sosmed-card:hover.x-twitter { border-color: #1DA1F2; }
+.sosmed-card:hover.threads { border-color: #000000; }
+
+.sosmed-icon {
+    font-size: 2.2rem;
+    margin-right: 20px;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.sosmed-card.instagram .sosmed-icon {
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sosmed-card.tiktok .sosmed-icon { color: #000000; text-shadow: 2px 2px 0px #00f2fe, -2px -2px 0px #fe0979; }
+.sosmed-card.x-twitter .sosmed-icon { color: #1DA1F2; }
+.sosmed-card.threads .sosmed-icon { color: #000000; }
+
+.sosmed-info h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.sosmed-info p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.sosmed-arrow {
+    margin-left: auto;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: var(--transition);
+}
+
+.sosmed-card:hover .sosmed-arrow {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--primary-color);
 }
 
 
